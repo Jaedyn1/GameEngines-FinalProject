@@ -2,13 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PanelPopulator : MonoBehaviour
+public class InventoryManager : MonoBehaviour
 {
-    public GameObject prefab_container;
-    public Transform headslot;
-    public Transform GlovesSlot;
 
+    public List<Items> Inventory = new List<Items>();
+    public void test(int itemid)
+    {
+        foreach (Items singleitem in Inventory)
+        {
+            
+        }
 
+    }
     // Start is called before the first frame update
     void Start()
     {

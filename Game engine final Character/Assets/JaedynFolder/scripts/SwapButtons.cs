@@ -10,6 +10,6 @@ public class SwapButtons : MonoBehaviour
     public void MoveMe()
     {
         PanelPopulator playerInventory = GameObject.FindObjectOfType<PanelPopulator>();
-        item.transform.SetParent(playerInventory.list2transform, true);
+        item.transform.SetParent(playerInventory.headslot, true);
     }
 }

@@ -2,17 +2,41 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Items : MonoBehaviour
+public enum Itemtype
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    GLOVES,
+    HELMET,
+    BOOTS,
+    CHEST,
+    WEAPON,
 
-    // Update is called once per frame
-    void Update()
+}
+[System.Serializable]
+
+[CreateAssetMenu(menuName ="Inventory/NewEquipement",fileName ="New Equipement",order =1)]
+public class Items : ScriptableObject
+{
+   
+    public int id;
+    public string IName;
+    [SerializeField]
+    public Itemtype Catigory;
+    public Sprite buttonicon;
+    public Transform inventoryTransform;
+    public Transform SlotTransform;
+
+    public Itemtype katigory
     {
-        
+        get
+        {
+            return Catigory;
+        }
+    }
+    public Sprite Buttonicon
+    {
+        get
+        {
+            return buttonicon;
+        }
     }
 }
