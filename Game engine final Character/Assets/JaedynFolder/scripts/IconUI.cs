@@ -4,21 +4,27 @@ using UnityEngine;
 
 public class IconUI : MonoBehaviour
 {
-    public Items iconData;
+    public Equipement iconData;
     public GameObject item;
+
 
     public void MoveMe()
     {
-       
-            PanelPopulator playerInventory = GameObject.FindObjectOfType<PanelPopulator>();
-            item.transform.SetParent(playerInventory.GlovesSlot, true);
-        }
-                
+        //moves to player inventory
+        bool waspickedup = InventoryManager.instance.Add(iconData);
 
-        
+        if (waspickedup)
+        {
+           // Destroy(gameObject);
+         
+        }
+
+
+
         //PanelPopulator playerInventory = GameObject.FindObjectOfType<PanelPopulator>();
         //transform.SetParent(playerInventory.list2transform, true);
     }
+}
     // Start is called before the first frame update
    
 

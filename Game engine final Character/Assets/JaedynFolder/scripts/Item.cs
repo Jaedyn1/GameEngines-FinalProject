@@ -2,36 +2,34 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Itemtype
-{
-    GLOVES,
-    HELMET,
-    BOOTS,
-    CHEST,
-    WEAPON,
 
-}
+
 [System.Serializable]
 
 [CreateAssetMenu(menuName ="Inventory/NewEquipement",fileName ="New Equipement",order =1)]
-public class Items : ScriptableObject
+public class Item : ScriptableObject
 {
    
+    
     public int id;
     public string IName;
     [SerializeField]
-    public Itemtype Catigory;
+ 
     public Sprite buttonicon;
     public Transform inventoryTransform;
     public Transform SlotTransform;
+    public bool IsDefult = false;
 
-    public Itemtype katigory
+    public virtual void Use()
     {
-        get
-        {
-            return Catigory;
-        }
+
+        Debug.Log("using" + IName);
+
     }
+
+    
+   
+    
     public Sprite Buttonicon
     {
         get

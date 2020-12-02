@@ -4,25 +4,52 @@ using UnityEngine;
 
 public class InventoryManager : MonoBehaviour
 {
+    public List<Item> items = new List<Item>();
 
-    public List<Items> Inventory = new List<Items>();
-    public void test(int itemid)
+    #region Singeleton
+    public static InventoryManager instance;
+
+    public delegate void Onitemchange();
+    public Onitemchange onitemchangeCallBack;
+    public int Space = 5;
+    public void Awake()
     {
-        foreach (Items singleitem in Inventory)
+        if (instance != null)
         {
-            
+            Debug.LogWarning("More then one instance of inventory found! ");
+            return;
+        }
+        instance = this;
+    }
+    #endregion
+
+    public bool Add(Equipement item)
+    {
+        if (!item.IsDefult)
+        {
+            if (items.Count > Space)
+            {
+                Debug.Log("Is not enough space");
+                return false;
+            }
+            items.Add(item);
+            if (onitemchangeCallBack != null)
+            {
+                onitemchangeCallBack.Invoke();
+            }
         }
 
+        return true;
+
     }
-    // Start is called before the first frame update
-    void Start()
+    public void Remove(Item item)
     {
-        
+
+        items.Remove(item);
+        if (onitemchangeCallBack != null)
+        {
+            onitemchangeCallBack.Invoke();
+        }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

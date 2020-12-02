@@ -9,12 +9,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 472cde42f023a5448b4a37bdce8ace98, type: 3}
-  m_Name: FurGloves
+  m_Script: {fileID: 11500000, guid: d3eeceea234a8c44a99e1c8609839bea, type: 3}
+  m_Name: helmet of fire
   m_EditorClassIdentifier: 
-  id: 1
-  IName: FurGloves
-  Catigory: 0
-  buttonicon: {fileID: 0}
+  id: 0
+  IName: helmet of fire
+  buttonicon: {fileID: 21300000, guid: db7f14de97aa03847be56cfb6d082fba, type: 3}
   inventoryTransform: {fileID: 0}
   SlotTransform: {fileID: 0}
+  IsDefult: 0
+  equipslot: 1
