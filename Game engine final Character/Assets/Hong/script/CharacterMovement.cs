@@ -10,13 +10,14 @@ public class CharacterMovement : MonoBehaviour
     private Vector3 playerVelocity;
     private bool groundedPlayer;
     private float playerSpeed = 4.0f;
-    private float jumpHeight = 1.0f;
-    private float gravityValue = -9.81f;
+  //  private float jumpHeight = 1.0f;
+   // private float gravityValue = -9.81f;
     public Vector3 lastPosition;
     public int attackcount;
+    private static CharacterMovement playerInstance;
 
 
-   
+
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -67,5 +68,17 @@ public class CharacterMovement : MonoBehaviour
         animator.SetFloat("Speed", speed);
         lastPosition = this.transform.position;
 
+    }
+    void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+        if (playerInstance == null)
+        {
+            playerInstance = this;
+        }
+        else
+        {
+            DestroyObject(gameObject);
+        }
     }
 }

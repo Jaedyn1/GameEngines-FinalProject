@@ -12,6 +12,7 @@ public class Camera : MonoBehaviour
     [Range(0.01f, 1.0f)]
     public float SmoothFactor = 0.5f;
     public bool LookAtPlayer = false;
+    public static Camera cameraInstance;
 
 
     void Start()
@@ -27,5 +28,17 @@ public class Camera : MonoBehaviour
 
         if (LookAtPlayer)
             transform.LookAt(playertransform);
+    }
+    void Awake()
+    {
+        DontDestroyOnLoad(this.gameObject);
+        if (cameraInstance == null)
+        {
+            cameraInstance = this;
+        }
+        else
+        {
+            DestroyObject(gameObject);
+        }
     }
 }
