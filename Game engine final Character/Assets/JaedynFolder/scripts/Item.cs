@@ -26,6 +26,12 @@ public class Item : ScriptableObject
         Debug.Log("using" + IName);
 
     }
+    public void removeFromInventory()
+    {
+        InventoryManager.instance.Remove(this);
+
+
+    }
 
     
    

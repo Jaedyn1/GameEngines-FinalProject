@@ -24,9 +24,20 @@ public class inventoryslot : MonoBehaviour
 
         icon.sprite = null;
         icon.enabled = false;
-
+        
 
     }
+    public void UseItem()
+    {
+        if (item != null)
+        {
+            item.Use();
+
+        }
+
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {
