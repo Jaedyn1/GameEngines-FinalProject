@@ -121,6 +121,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!1 &21403628
 GameObject:
   m_ObjectHideFlags: 0
@@ -8063,3 +8064,5 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3903576047827779766}
   m_PrefabAsset: {fileID: 0}
+=======
+>>>>>>> Stashed changes
