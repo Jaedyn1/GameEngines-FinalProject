@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: flamesword
   m_EditorClassIdentifier: 
   id: 4
-  IName: 
+  IName: flamesword
+  Invintorytype: 4
   buttonicon: {fileID: 21300000, guid: f171887fcfe56cf49b0b70acbcefdc88, type: 3}
   inventoryTransform: {fileID: 0}
   SlotTransform: {fileID: 0}

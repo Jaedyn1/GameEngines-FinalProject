@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class inventoryslot : MonoBehaviour
 {
+    public Image head;
     Item item;
     public Image icon;
 
@@ -16,6 +17,11 @@ public class inventoryslot : MonoBehaviour
 
         icon.enabled = true;
 
+        
+        if (newItem.Invintorytype == Item.InvintoryState.WEAPON)
+        {
+            //change to dofferent invintory slot;
+        }
     }
 
     public void clearSlot()
@@ -32,11 +38,12 @@ public class inventoryslot : MonoBehaviour
         if (item != null)
         {
             item.Use();
-
+            
         }
 
     }
 
+   
 
     // Start is called before the first frame update
     void Start()

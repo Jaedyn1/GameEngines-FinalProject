@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class InventoryManager : MonoBehaviour
 {
     public List<Item> items = new List<Item>();
@@ -9,6 +9,7 @@ public class InventoryManager : MonoBehaviour
     #region Singeleton
     public static InventoryManager instance;
 
+  
     public delegate void Onitemchange();
     public Onitemchange onitemchangeCallBack;
     public int Space = 5;
@@ -51,5 +52,11 @@ public class InventoryManager : MonoBehaviour
             onitemchangeCallBack.Invoke();
         }
     }
+    public void changecatagory()
+    {
+
+
+
+    } 
 
 }
