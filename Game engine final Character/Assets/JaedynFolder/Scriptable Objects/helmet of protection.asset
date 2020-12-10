@@ -14,7 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 0
   IName: helmet of protection
-  Invintorytype: 1
   buttonicon: {fileID: 21300000, guid: deb341c37657b014ba67e07194e2e597, type: 3}
   inventoryTransform: {fileID: 0}
   SlotTransform: {fileID: 0}

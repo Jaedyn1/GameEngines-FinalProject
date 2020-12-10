@@ -6,36 +6,25 @@ using UnityEngine;
 
 [System.Serializable]
 
-
 [CreateAssetMenu(menuName ="Inventory/NewEquipement",fileName ="New Equipement",order =1)]
 public class Item : ScriptableObject
 {
-    public enum InvintoryState
-    {
-        GLOVES,
-        HELMET,
-        BOOTS,
-        CHEST,
-        WEAPON,
-
-    }
-
+   
+    
     public int id;
     public string IName;
-
-
-    public InvintoryState Invintorytype;
+    [SerializeField]
+ 
     public Sprite buttonicon;
     public Transform inventoryTransform;
     public Transform SlotTransform;
     public bool IsDefult = false;
 
-    
     public virtual void Use()
     {
 
         Debug.Log("using" + IName);
-        
+
     }
     public void removeFromInventory()
     {
