@@ -6,22 +6,13 @@ using UnityEngine.UI;
 
 public class SwitchScene : MonoBehaviour
 {
-    public GameObject character;
+   
    
     bool PlayerEnter;
     [SerializeField]
     public string sceneName;
     public GameObject TipsTitle;
     
-    void Start()
-    {
-        
-        if (character = null)
-        {
-            Debug.Log("didn't find the player");
-          character =  GameObject.Find("Player");
-        }
-    }
     public void SwitchToScene()
     {
         SceneManager.LoadScene(sceneName);
@@ -50,10 +41,10 @@ public class SwitchScene : MonoBehaviour
             PlayerEnter = true;
             if ( Input.GetButtonDown("Jump"))
             {
-                TipsTitle.SetActive(false);
-                character.transform.position = new Vector3(0, 0, 0);
-
                 SwitchToScene();
+                TipsTitle.SetActive(false);
+          
+               
             }
         }
     }

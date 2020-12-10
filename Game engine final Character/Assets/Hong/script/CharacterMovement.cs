@@ -15,6 +15,8 @@ public class CharacterMovement : MonoBehaviour
     public Vector3 lastPosition;
     public int attackcount;
     private static CharacterMovement playerInstance;
+    public Transform set;
+    
 
 
 
@@ -67,6 +69,14 @@ public class CharacterMovement : MonoBehaviour
         float speed = Vector3.Distance(lastPosition, transform.position) / Time.deltaTime;
         animator.SetFloat("Speed", speed);
         lastPosition = this.transform.position;
+        
+        
+            if (Input.GetKeyDown(KeyCode.F1))
+            {
+                set.transform.position = new Vector3(0, 0, 0);
+
+            }
+        
 
     }
     void Awake()
@@ -81,4 +91,7 @@ public class CharacterMovement : MonoBehaviour
             DestroyObject(gameObject);
         }
     }
+   
+
+
 }
