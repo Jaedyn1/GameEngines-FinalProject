@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3eeceea234a8c44a99e1c8609839bea, type: 3}
   m_Name: helmet of fire
   m_EditorClassIdentifier: 
-  id: 1
+  id: 0
   IName: helmet of fire
   buttonicon: {fileID: 21300000, guid: db7f14de97aa03847be56cfb6d082fba, type: 3}
   inventoryTransform: {fileID: 0}

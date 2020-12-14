@@ -8,6 +8,11 @@ public class IconUI : MonoBehaviour
     public GameObject item;
 
 
+    public void OnTriggerEnter(Collider other)
+    {
+        MoveMe();
+        Destroy(gameObject);
+    }
     public void MoveMe()
     {
         //moves to player inventory
